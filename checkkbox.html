@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+	<title>Anket</title>
+	<meta charset="utf-8">
+</head>
+<body style="text-align: left;">
+
+	<body bgcolor=#ff7f50></body>
+
+	<div align="center"><p><h2>Gizem Deniz Anket</p></h2></div>
+	
+	<form method="POST" action="deneme.php">
+	
+		<h3>Name and Surname?</h3>
+		<input type="text" name="nameAndSurname" required>
+		<h3>Phone Number?</h3>
+		<input type="text" name="phone" placeholder="(538) 337 92 93" required maxlength="10" minlength="10">
+		<h3>Gender?</h3>
+		<input type="radio" name="cinsiyet" value="Erkek"> Erkek <br>
+		<input type="radio" name="cinsiyet" value="Kadın"> Kadın <br>
+		<h3>what would you like to eat?</h3>
+		<input type="radio" name="fruit" value="Apple" required=""> Apple <img src="elma.jpeg" width="30" height="30"/><br>
+		<input type="radio" name="fruit" value="Orange" required=""> Orange <img src="orange.jpg" width="30" height="30"/><br>
+		<input type="radio" name="fruit" value="Banana" required=""> Banana <img src="banana.jpg" width="30" height="30"/><br>
+		<h3>what would you like to drink?</h3>
+		<input type="checkbox" name="drink[]" value="Tea"> Tea <br>
+		<input type="checkbox" name="drink[]" value="Coffee"> Coffee <br>
+		<input type="checkbox" name="drink[]" value="Milk"> Milk <br>
+		<h3>Do you want to tell us something?</h3>
+		<textarea name="comment" rows="10" cols="50" placeholder="You can write your comment."></textarea>
+		<input type="submit" name="Gönder">
+
+	</form>
+
+
+</body>
+
