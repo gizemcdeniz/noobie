@@ -2,11 +2,6 @@
 
 <?php 
 
-$tarih =date("d-m-Y");
-
-    echo $tarih;
-
-
 if ($_POST) {
 
     $name = $_POST['nameAndSurname'];
