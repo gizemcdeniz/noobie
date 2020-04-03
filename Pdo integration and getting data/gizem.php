@@ -10,13 +10,17 @@ Password: <input type="password" name="password"><br>
 </body>
 </html>
 
-<?php
+<?
 
-include ("mysql.php");
- $query = $pdo->prepare("SELECT password FROM user WHERE username=?");
-    $query->execute([$_POST['username']]);
-    if($query->fetchColumn() === $_POST['password']) 
-    {
+$dsn = "mysql:host=localhost;dbname=userphp";
+$user = "root";
+$passwd = "";
+
+$pdo = new PDO($dsn, $user, $passwd);
+ $query = $pdo->prepare("SELECT * FROM user WHERE username=? and password=?");
+    $query->execute([$_POST['username'], $_POST['password']]);
+   
+    
       if ( $query->rowCount() ){
         foreach( $query as $row ){
           print $row['username']."<br />";
@@ -24,6 +28,6 @@ include ("mysql.php");
           print $row['phone']."<br />";
         }
       }
-    }
+    
 
 ?>
